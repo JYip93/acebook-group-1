@@ -13,7 +13,7 @@ It uses:
 
 ## Card wall
 
-REPLACE THIS TEXT WITH A LINK TO YOUR CARD WALL
+https://trello.com/b/4iYwsP0H/acebook-group-1-final
 
 ## Quickstart
 
