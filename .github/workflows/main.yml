@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Create mongoDB Docker container for API testing
-      uses: actions/mongo-action@v1.0.1
+      uses: RB301/mongo-action@v1.0.1
     - name: Install npm packages
       run: npm install
     - name: Run `npm test`
