@@ -26,8 +26,11 @@ jobs:
       uses: DigiPie/mongo-action@v1.0.1
     - name: Install npm packages
       run: npm install
-    - name: Run `npm test`
-      run: npm test
+    - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          build: npm run start:test
+          start: npm test
       working-directory: ${{ matrix.work-dir }}
       env:
         CI: true
