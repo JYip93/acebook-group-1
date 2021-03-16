@@ -27,10 +27,10 @@ jobs:
     - name: Install npm packages
       run: npm install
     - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          build: npm run start:test
-          start: npm test
+      uses: cypress-io/github-action@v2
+      with:
+        build: npm run start:test
+        start: npm test
       working-directory: ${{ matrix.work-dir }}
       env:
         CI: true
