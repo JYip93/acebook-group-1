@@ -33,5 +33,5 @@ jobs:
         start: npm test
       env:
         CI: true
-        MONGODB_URI: mongodb://localhost/acebook # Access mongoDB Docker container
+        MONGODB_URI: mongodb://localhost/acebook_test # Access mongoDB Docker container
         
