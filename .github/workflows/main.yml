@@ -14,12 +14,12 @@ jobs:
     container:
       image: node
 
-    steps:
-      - uses: actions/checkout@v1
-      - name: Install & Tests
-        run: |
-          npm install
-          npm test
+    # steps:
+    #   - uses: actions/checkout@v1
+    #   - name: Install & Tests
+    #     run: |
+    #       npm install
+    #       npm test
   cd:
     runs-on: ubuntu-latest
     needs: ci
