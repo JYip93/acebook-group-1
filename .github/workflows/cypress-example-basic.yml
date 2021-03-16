@@ -8,6 +8,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Start up MongoDB
+        with: 
+          start: brew services start mongodb-community@4.2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
