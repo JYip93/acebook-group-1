@@ -22,16 +22,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Create mongoDB Docker container for API testing
-      uses: DigiPie/mongo-action@v1.0.1
-    - name: Install npm packages
-      run: npm install
-    - name: Cypress run
-      uses: cypress-io/github-action@v2
+    name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.3.0
       with:
-        build: npm run start:test
-        start: npm test
+        mongodb-version: ${{ matrix.mongodb-version }}
+
+    - run: npm install
+
+    - run: npm test
       env:
-        CI: true
-        MONGODB_URI: mongodb://localhost/acebook_test # Access mongoDB Docker container
+        CI: true # Access mongoDB Docker container
         
