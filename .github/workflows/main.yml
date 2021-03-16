@@ -31,7 +31,6 @@ jobs:
       with:
         build: npm run start:test
         start: npm test
-      working-directory: ${{ matrix.work-dir }}
       env:
         CI: true
         MONGODB_URI: mongodb://localhost/acebook # Access mongoDB Docker container
