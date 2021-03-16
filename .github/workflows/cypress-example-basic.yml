@@ -11,7 +11,7 @@ jobs:
       - name: Start MongoDB
         uses: supercharge/mongodb-github-action@1.3.0
         with:
-          mongodb-version: ${{ matrix.mongodb-version }}
+          mongodb-version: mongodb-community@4.2
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
