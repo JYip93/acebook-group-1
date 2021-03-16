@@ -69,4 +69,5 @@ jobs:
     ssh: # optional
     # GitHub Token used to authenticate against a repository for Git context
     github-token: # optional, default is ${{ github.token }}
+    - run: docker build --tag acebook .
       
