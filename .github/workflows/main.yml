@@ -15,7 +15,7 @@ jobs:
       matrix:
         node-version: [15.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        mongodb-version: [4.0, 4.2, 4.4]
+        mongodb-version: [4.4]
     steps:
     - name: Checkout repo
       uses: actions/checkout@v2
@@ -30,8 +30,7 @@ jobs:
     - name: Cypress run
       uses: cypress-io/github-action@v2
       with:
-        build: npm run start:test
-        start: npm test
+        start: npm run start:test
       env:
         CI: true
         MONGODB_URI: mongodb://localhost/acebook_test # Access mongoDB Docker container
