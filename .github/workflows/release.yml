@@ -65,17 +65,17 @@ jobs:
         # GitHub Token used to authenticate against a repository for Git context
         github-token: # optional, default is ${{ github.token }}
     
-    - name: GitHub Action for s3_website
-      uses: justinharringa/actions-s3_website@v1.0
+    # - name: GitHub Action for s3_website
+    #   uses: justinharringa/actions-s3_website@v1.0
 
-    - name: Deploy
-      uses: docker://arb280693/acebookgroup1:v1
-      with:
-        args: 'push --site build'
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        S3_BUCKET: ${{ secrets.S3_BUCKET }}
+    # - name: Deploy
+    #   uses: docker://arb280693/acebookgroup1:v1
+    #   with:
+    #     args: 'push --site build'
+    #   env:
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     S3_BUCKET: ${{ secrets.S3_BUCKET }}
 
 
 
