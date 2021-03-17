@@ -2,7 +2,7 @@ name: S3 Sync
 
 on:
   workflow_run:
-    workflows: ["release"]
+    workflows: ["Push to Docker Hub"]
     types:
       - completed
 
