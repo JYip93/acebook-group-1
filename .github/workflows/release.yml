@@ -35,7 +35,7 @@ jobs:
         # List of metadata for an image
         labels: # optional
         # List of tags
-        tags: arb280693/acebookgroup1:v1
+        tags: arb280693/acebookgroup1:latest
         # Always attempt to pull a newer version of the image
         pull: # optional, default is false
         # Sets the target stage to build
