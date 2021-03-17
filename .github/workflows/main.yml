@@ -48,3 +48,6 @@ jobs:
       with:
     # Args to jest
         jestArgs: # optional
+      env:
+        CI: true
+        MONGODB_URI: mongodb://localhost/acebook_test # Access mongoDB Docker container
