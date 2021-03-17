@@ -27,7 +27,7 @@ jobs:
         # Builder instance
         builder: # optional
         # Build's context is the set of files located in the specified PATH or URL
-        context: # optional
+        context: .
         # Path to the Dockerfile
         file: ./Dockerfile
         # List of build-time variables
@@ -35,7 +35,7 @@ jobs:
         # List of metadata for an image
         labels: # optional
         # List of tags
-        tags: # optional
+        tags: arb280693/acebookgroup1:v1
         # Always attempt to pull a newer version of the image
         pull: # optional, default is false
         # Sets the target stage to build
@@ -49,7 +49,7 @@ jobs:
         # Load is a shorthand for --output=type=docker
         load: # optional, default is false
         # Push is a shorthand for --output=type=registry
-        push: # optional, default is false
+        push: true
         # List of output destinations (format: type=local,dest=path)
         outputs: # optional
         # List of external cache sources for buildx (eg. user/app:cache, type=local,src=path/to/dir)
