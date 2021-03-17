@@ -40,4 +40,4 @@ jobs:
       uses: iCrawl/action-eslint@v1
       with:
     # Custom glob to overwrite which files to lint.
-        custom-glob: src
+        custom-glob:
