@@ -34,14 +34,16 @@ jobs:
         tags: arb280693/acebookgroup1
 
 
-    - name: Deploy
-      uses: docker://arb280693/acebookgroup1:latest
-      with:
-        args: 'push --site build'
-      env:
-        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        S3_BUCKET: ${{ secrets.S3_BUCKET }}
+  
+
+    # - name: Deploy
+    #   uses: docker://arb280693/acebookgroup1:latest
+    #   with:
+    #     args: 'push --site build'
+    #   env:
+    #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+    #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+    #     S3_BUCKET: ${{ secrets.S3_BUCKET }}
 
 
 #Build Docker image
