@@ -1,10 +1,14 @@
 version: 0.0
-os: linux
-files:
-  - source: /
-    destination: views
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        TaskDefinition: "arn:aws:ecs:eu-west-2:664047078509:task-definition/acebookgroup1:latest"
+        LoadBalancerInfo:
+          ContainerName: "loving_lewin"
+          ContainerPort: 3000
+
 hooks:
   ApplicationStart:
     - location: Scripts/RunFunctionalTests.sh
       timeout: 3600
-  
