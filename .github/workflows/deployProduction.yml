@@ -11,13 +11,13 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-      steps:  
-      - name: AWS CodeDeploy
-        uses: sourcetoad/aws-codedeploy-action@v1
-        with:
-          aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID}}
-          aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          codedeploy_name: Group1-acebook-aws
-          codedeploy_group: production-group1-acebook
-          s3_bucket: acebook-team1
-          s3_folder: acebook-group-1
+    steps:  
+    - name: AWS CodeDeploy
+      uses: sourcetoad/aws-codedeploy-action@v1
+      with:
+        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        codedeploy_name: Group1-acebook-aws
+        codedeploy_group: production-group1-acebook
+        s3_bucket: acebook-team1
+        s3_folder: acebook-group-1
