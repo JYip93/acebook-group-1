@@ -21,3 +21,4 @@ jobs:
         codedeploy_group: production-group1-acebook
         s3_bucket: acebook-team1
         s3_folder: acebook-group-1
+      uses: actions/checkout@v2
