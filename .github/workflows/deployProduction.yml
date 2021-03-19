@@ -1,6 +1,5 @@
 name: Deploy to Production
 
-
 on:
   workflow_run:
     workflows: ["S3 Sync"]
@@ -9,16 +8,22 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-    steps:  
-    - name: AWS CodeDeploy
-      uses: sourcetoad/aws-codedeploy-action@v1
-      with:
-        aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID}}
-        aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        codedeploy_name: Group1-acebook-aws
-        codedeploy_group: production-group1-acebook
-        s3_bucket: acebook-team1
-        s3_folder: acebook-group-1
-      uses: actions/checkout@v2
+    steps:
+      - name: webfactory/create-aws-codedeploy-deployment
+        # You may pin to the exact commit or the version.
+        # uses: webfactory/create-aws-codedeploy-deployment@cbc07d4e007319e31466e3677d0ae6be033e35e4
+        uses: webfactory/create-aws-codedeploy-deployment@v0.2.2
+        with:
+          # AWS CodeDeploy application name; defaults to short repository name
+          application: Group1-acebook-aws
+
+        # - name: AWS CodeDeploy
+        #   uses: sourcetoad/aws-codedeploy-action@v1
+        #   with:
+        #     aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        #     aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #     codedeploy_name: Group1-acebook-aws
+        #     codedeploy_group: production-group1-acebook
+        #     s3_bucket: acebook-team1
+        #     s3_folder: acebook-group-1
